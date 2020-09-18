@@ -1,0 +1,83 @@
+/* ========================================================================
+     Component: dropdown-extras
+ ========================================================================== */
+
+.dropdown-menu {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    @include media-breakpoint-up(md) {
+        top: 4px;
+    }
+}
+
+// Allows to mix list group inside dropdowns
+.dropdown-list {
+
+    .dropdown-item {
+        padding: 0;
+    }
+
+    >.dropdown-menu {
+        padding: 0;
+        min-width: 220px;
+    }
+
+    .list-group {
+        margin: 0;
+    }
+
+    .list-group-item {
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+        &:first-child {
+            border-top: 0;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+.dropdown-divider {
+    margin: .5rem 0;
+    border-top-color: rgba($gray-base,.16);
+}
+.dropdown-header {
+    color: #a1a2a3;
+    padding: 1rem 1rem 1rem 1rem
+}
+
+.list-background {
+    background-image: linear-gradient(135deg,#a99ac3 0,#89b4d6 100%);
+}
+
+// Labels inside dropdowns
+.dropdown {
+    >a {
+        position: relative;
+        >.badge {
+            position: absolute;
+            //top: 10px;
+            //right: 0;
+            top: 10px;
+            right: 6px;
+            //top: 18%;
+            //left: 40px;
+            padding: 3px 5px;
+        }
+    }
+}
+
+// Popper doesnt place correctly dropdowns
+// we can use forced class to place them
+.dropdown-menu-right-forced {
+    right: 0 !important;
+    left: auto !important;
+}
+
+// Remove default icon from dropdowns
+.dropdown-toggle-nocaret {
+    &:after {
+        display: none;
+    }
+}
