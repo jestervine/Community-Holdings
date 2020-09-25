@@ -1,0 +1,18 @@
+@mixin bg-gradient($colorStart, $colorStop) {
+    background-image: -webkit-linear-gradient(135deg, $colorStart 0, $colorStop 100%);  /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(135deg, $colorStart 0, $colorStop 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+// Predefined Gradients
+@mixin bg-gradient-secondary { @include bg-gradient($mdc-blue-grey-200, $mdc-blue-grey-400); }
+@mixin bg-gradient-primary { @include bg-gradient($mdc-deep-purple-500, $mdc-blue-500); }
+@mixin bg-gradient-info { @include bg-gradient($mdc-teal-500, $mdc-blue-400); }
+@mixin bg-gradient-success { @include bg-gradient($mdc-lime-500, $mdc-green-500); }
+@mixin bg-gradient-danger { @include bg-gradient($mdc-purple-700, $mdc-red-500); }
+@mixin bg-gradient-warning { @include bg-gradient($mdc-yellow-600, $mdc-orange-500); }
+
+@mixin btn-gradient($colorStart, $colorStop) {
+    border: 0;
+    background: -webkit-linear-gradient(135deg, $colorStart 0, $colorStop 100%) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(135deg, $colorStart 0, $colorStop 100%) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

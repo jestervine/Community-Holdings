@@ -188,3 +188,25 @@ $btn-fw-lg : 140px;
         @include button-outline-variant($pink);
     }
 }
+
+.btn-gradient {
+    &.btn-secondary {
+        @include btn-gradient($mdc-blue-grey-200, $mdc-blue-grey-400);
+        color: #fff !important;
+    }
+    &.btn-primary {
+        @include btn-gradient($mdc-deep-purple-500, $mdc-blue-500);
+    }
+    &.btn-info {
+        @include btn-gradient($mdc-teal-500, $mdc-blue-400);
+    }
+    &.btn-success {
+        @include btn-gradient($mdc-lime-500, $mdc-green-500);
+    }
+    &.btn-danger {
+        @include btn-gradient($mdc-purple-700, $mdc-red-500);
+    }
+    &.btn-warning {
+        @include btn-gradient($mdc-yellow-600, $mdc-orange-500);
+    }
+}

@@ -11,7 +11,7 @@
     // disables scrollbar
     body.style.overflow = 'hidden';
 
-    timeout = setTimeout(startCounter, 5); 
+    timeout = setTimeout(startCounter, 20); 
 
     // main.ts call this function once the app is boostrapped
     global.appBootstrap = function() {
@@ -23,7 +23,7 @@
         if (progressBar) progressBar.style.width = Math.round(counter) + '%';
         
         counter = counter + (0.015 * Math.pow(1 - Math.sqrt(remaining), 2));
-        timeout = setTimeout(startCounter, 10);   
+        timeout = setTimeout(startCounter, 20);   
     }
 
     function finishCounter() {
@@ -36,11 +36,12 @@
         if (progressBar) progressBar.style.width = Math.round(counter) + '%';
         counter = counter + 1;
 
-        if(counter > 99) {
+        if(counter >= 99) {
             endCounter();
         }
-
-        timeoutfinish = setTimeout(cycleCounter, 10);   
+        else {
+            timeoutfinish = setTimeout(cycleCounter, 20); 
+        }
     }
 
     function endCounter() {

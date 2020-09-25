@@ -12,9 +12,9 @@ export class SettingsService {
         // User Settings
         // -----------------------------------
         this.user = {
-            name: 'John',
-            job: 'ng-developer',
-            picture: 'assets/img/user/02.jpg'
+            name: 'Josh',
+            job: 'Web App Developer',
+            picture: 'assets/img/user/14.jpg'
         };
 
         // App Settings
